@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d700590342.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Walter White's Contacts</title>
+  </head>
+  <body>
+    <main>
+      <header><h1>Walter White's Contacts</h1></header>
+      <section>
+        <form class="add-contact">
+          <h2>Add Contact</h2>
+          <input type="text" name="fn" id="fn" placeholder="First Name" />
+          <input type="text" name="ln" id="ln" placeholder="Last Name" />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            placeholder="Phone Number"
+          />
+          <button>Add Contact</button>
+        </form>
+        <div class="filter-form">
+          <label for="filter">Find by first name:</label>
+          <input type="text" name="filter" id="filter" />
+        </div>
+      </section>
+      <section>
+        <ul class="contacts-list"></ul>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
