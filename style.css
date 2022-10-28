@@ -36,6 +36,12 @@ header {
   width: 100%;
 }
 
+.alien {
+  width: 24px;
+  margin: 0 24px;
+  opacity: 0.5;
+}
+
 h1,
 h2 {
   font-size: 20px;
@@ -65,7 +71,7 @@ h2 {
   margin-bottom: 10px;
 }
 
-button {
+.add-contact button {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   border: none;
@@ -76,6 +82,10 @@ button {
   text-transform: uppercase;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.add-contact button:hover {
+  background-color: #0073ff;
 }
 
 .filter-form {
@@ -127,4 +137,10 @@ button {
 
 i.fav {
   color: #e00f0f;
+}
+i.fav:hover {
+  opacity: 0.6;
+}
+i.fa-trash-can:hover {
+  color: #0073ff;
 }

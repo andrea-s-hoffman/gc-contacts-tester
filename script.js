@@ -7,7 +7,7 @@ const getAllContacts = (prefix) => {
     .then((res) => res.json())
     .then((data) => {
       contacts = data;
-      console.log(contacts);
+      // console.log(contacts);
       buildContacts();
     });
 };
@@ -79,7 +79,7 @@ buildContacts = () => {
     btnsDiv.classList.add("btns");
     favButton.classList.add("fa-solid", "fa-heart");
     trashButton.classList.add("fa-solid", "fa-trash-can");
-    if (c.favorite) {
+    if (c.isFavorite) {
       favButton.classList.add("fav");
     }
     favButton.setAttribute("data-index", i);
@@ -108,7 +108,7 @@ document.querySelector(".add-contact").addEventListener("submit", (e) => {
       lastName: lName,
     },
     phoneNumber: +pNumber,
-    favorite: false,
+    isFavorite: false,
   };
   console.log(newContact);
   postNewContact(newContact);
@@ -119,7 +119,7 @@ list.addEventListener("click", (e) => {
   if (e.target.classList.contains("fa-heart")) {
     const index = e.target.getAttribute("data-index");
     const updatedContact = contacts[index];
-    updatedContact.favorite = !updatedContact.favorite;
+    updatedContact.isFavorite = !updatedContact.isFavorite;
     console.log(updatedContact);
     const id = updatedContact.id;
     flipFav(updatedContact, id);
@@ -129,5 +129,4 @@ list.addEventListener("click", (e) => {
     deleteContact(id);
   }
 });
-
 getAllContacts("");
